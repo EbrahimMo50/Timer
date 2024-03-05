@@ -10,14 +10,14 @@ import java.io.InputStream;
 
 public class Panel extends JPanel{
 
-    Color BGcolor=new Color(20,20,20);
-    Dimension frameSize = new Dimension(400,400);
-    BufferedImage img;
-    BufferedImage[] digits;
+    private Color BGcolor=new Color(20,20,20);
+    private Dimension frameSize = new Dimension(400,400);
+    private BufferedImage img;
+    private BufferedImage[] digits;
     //digit is 135 pixel in height 110 in width
     //distance between digits 20 pixels
 
-    private int seconds1,seconds2;
+    private int seconds1=-1,seconds2;
     private int minutes1,minutes2;
     String str = "TIMER";
 
