@@ -17,18 +17,18 @@ public class Panel extends JPanel{
     //digit is 135 pixel in height 110 in width
     //distance between digits 20 pixels
 
-    private int seconds1=-1,seconds2;
+    private int seconds1,seconds2;
     private int minutes1,minutes2;
     String str = "TIMER";
 
     public Panel(){
         setBackground(BGcolor);
         setPreferredSize(frameSize);
-        loadImg();
-        updateClock();
+        loadImg(); 
     }
 
     public void updateClock() {
+        
         seconds1++;
         
         if(seconds1==10){
@@ -72,6 +72,13 @@ public class Panel extends JPanel{
                 if(counter>=10)break;
             }
         }
+    }
+
+    public void reset(){
+        seconds1=-1;
+        seconds2=0;
+        minutes1=0;
+        minutes2=0;
     }
 
     public void paintComponent(Graphics g){
